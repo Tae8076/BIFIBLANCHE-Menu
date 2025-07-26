@@ -60,6 +60,30 @@
     }
 
     /* 화살표 파트(css) */
+    .arrow {
+      width: 0;
+      height: 0;
+      border-left: 6px solid #555;
+      border-top: 6px solid transparent; /* 아래를 가리키는 화살표 */
+      border-bottom: 6px solid transparent;
+      margin-right: 10px;
+      margin-left: 10px;
+      transition: transform 0.3s ease; /* 화살표 회전 애니메이션 */
+    }
+    .item-container.active .arrow {
+      transform: rotate(90deg); /* active 클래스일 때 180도 회전 */
+    }
+
+    /* 설명 텍스트 애니메이션 */
+    .description-wrapper { /* 설명 텍스트를 감싸는 래퍼 */
+      max-height: 0; /* 기본적으로 높이를 0으로 설정하여 숨김 */
+      overflow: hidden; /* 내용이 넘치면 숨김 */
+      transition: max-height 0.4s ease-out; /* 높이 변화 애니메이션 */
+      
+    }
+    .item-container.active .description-wrapper {
+      max-height: 500px; /* 열릴 때 최대 높이 (내용에 따라 조절) */	
+    }
     .description {
       font-size: 0.9em;
       color: #555;
@@ -84,15 +108,134 @@
 </div>
     <span class="title-text">BIFIBLANCHE SKIN CARE</span> <!--로고 및 로고 아래 텍스트-->
 
-    <div class="item-container"> <!--제품-->
+    <div class="item-container"> <!--클렌징 오일-->
       <div class="item">
-        <span class="item-price">3,000 ₩</span>
+        <div class="arrow"></div>
+        <span class="item-name">Cleansing oil </span>
+        <span class="item-price">17,000 ₩</span>
       </div>
-	     <div class="description">
+      <div class="description-wrapper">
+        <div class="description">
 	<div style="text-align: center;">
-	  <img src="BIFIBLANCHE_product.jpg" class="exception-height">
+	  <img src="Cleansing oil.jpg"  height="290" width: auto>
+    <p>Plant-based washable Cleansing oil</p>
+	</div>
+        </div>
       </div>
     </div>
+
+    <div class="item-container"> <!--수분 세럼-->
+      <div class="item">
+        <div class="arrow"></div>
+        <span class="item-name">Hydrating serum </span>
+        <span class="item-price">21,000 ₩</span>
+      </div>
+      <div class="description-wrapper">
+        <div class="description">
+	<div style="text-align: center;">
+	  <img src="Hydrating serum.jpg"  height="290" width: auto>
+    <p>Hydrating serum with natural rose scent</p>
+	</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-container"> <!--수분 크림-->
+      <div class="item">
+        <div class="arrow"></div>
+        <span class="item-name">Moisturizing cream </span>
+        <span class="item-price">25,000 ₩</span>
+      </div>
+      <div class="description-wrapper">
+        <div class="description">
+	<div style="text-align: center;">
+	  <img src="Moisturizing cream.jpg"  height="290" width: auto>
+    <p>Lactobacillus & Plant-based squalane cream</p>
+	</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-container"> <!--페이스 오일-->
+      <div class="item">
+        <div class="arrow"></div>
+        <span class="item-name">Face oil </span>
+        <span class="item-price">27,000 ₩</span>
+      </div>
+      <div class="description-wrapper">
+        <div class="description">
+	<div style="text-align: center;">
+	  <img src="Face oil.jpg"  height="290" width: auto>
+    <p>Contains green tea seed oil and Plant-based squalane</p>
+	</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-container"> <!--컨투어 크림-->
+      <div class="item">
+        <div class="arrow"></div>
+        <span class="item-name">Eye & lip contour Cream </span>
+        <span class="item-price">18,000 ₩</span>
+      </div>
+      <div class="description-wrapper">
+        <div class="description">
+	<div style="text-align: center;">
+	  <img src="Moisturizing cream.jpg"  height="290" width: auto>
+    <p></p>
+	</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-container"> <!--컨투어 크림-->
+      <div class="item">
+        <div class="arrow"></div>
+        <span class="item-name">Eye & lip contour Cream </span>
+        <span class="item-price">18,000 ₩</span>
+      </div>
+      <div class="description-wrapper">
+        <div class="description">
+	<div style="text-align: center;">
+	  <img src="contour Cream.jpg"  height="290" width: auto>
+    <p></p>
+	</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-container"> <!--핸드 크림-->
+      <div class="item">
+        <div class="arrow"></div>
+        <span class="item-name">Hand cream </span>
+        <span class="item-price">10,000 ₩</span>
+      </div>
+      <div class="description-wrapper">
+        <div class="description">
+	<div style="text-align: center;">
+	  <img src="Hand cream.jpg"  height="290" width: auto>
+    <p>Fast-absorbing vanilla hand cream</p>
+	</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-container"> <!--풋 크림-->
+      <div class="item">
+        <div class="arrow"></div>
+        <span class="item-name">foot cream </span>
+        <span class="item-price">15,000 ₩</span>
+      </div>
+      <div class="description-wrapper">
+        <div class="description">
+	<div style="text-align: center;">
+	  <img src="foot cream.jpg"  height="290" width: auto>
+    <p>Foot cream with rosemary essential oil</p>
+	</div>
+        </div>
+      </div>
+    </div>
+
 
   </div>
   <a href="https://tae8076.github.io/BIFIBLANCHE-Menu/spanish/">
